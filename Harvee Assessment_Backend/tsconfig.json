@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "ES2023",
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "baseUrl": "./src",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@/*": ["./*"],
+      "@configs/*": ["configs/*"],
+      "@constants/*": ["constants/*"],
+      "@intl/*": ["intl/*"],
+      "@jobs/*": ["jobs/*"],
+      "@lib/*": ["lib/*"],
+      "@middlewares/*": ["middlewares/*"],
+      "@models/*": ["models/*"],
+      "@routes/*": ["routes/*"],
+      "@scripts/*": ["scripts/*"],
+      "@tests/*": ["tests/*"],
+      "@types/*": ["types/*"],
+      "@utils/*": ["utils/*"],
+      "@validators/*": ["validators/*"]
+    }
+  },
+  "exclude": ["node_modules"],
+  "include": ["src/**/*.mts"]
+}

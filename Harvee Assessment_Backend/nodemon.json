@@ -1,0 +1,8 @@
+{
+  "watch": ["src", "entry.mts"],
+  "ext": "mts,ts,js,json",
+  "exec": "tsx entry.mts",
+  "env": {
+    "NODE_ENV": "development"
+  }
+}

@@ -1,0 +1,27 @@
+import React, { Suspense as AppLoading, useState } from "react";
+import Navigation from "@navigation";
+import { Provider } from "react-redux";
+import { store, persistor } from "@redux/store";
+import { PersistGate } from "redux-persist/integration/react";
+import { BrowserRouter as AppRouter } from "react-router-dom";
+import Fallback from "@components/Fallback";
+
+// file imports
+import "./i18n";
+import "./global.css";
+
+function App() {
+  return (
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <AppLoading fallback={<Fallback />}>
+          <AppRouter>
+            <Navigation />
+          </AppRouter>
+        </AppLoading>
+      </PersistGate>
+    </Provider>
+  );
+}
+
+export default App;
